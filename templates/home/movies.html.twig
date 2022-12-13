@@ -1,0 +1,28 @@
+<div class="main">
+<br><br><br>
+<div class="video-container">
+    <iframe width="80%" style="border:none;" height="400"src={{movieKey}}></iframe> 
+</div>
+     
+<div class="movies-container">
+    {% for movie in movies %}
+    <div id={{movie.id}} class="card">
+    <img src={{movie["poster_path"]}} alt="Avatar" style="width:100%">
+    <div class="container">
+        <h4><b>{{movie["title"]}}</b></h4> 
+        {% for i in 1..5 %}
+            {% if movie["vote_average"]/2 > i %}
+                <span class="fa fa-star" style="color:orange"></span>
+            {% else %}
+            <span class="fa fa-star" ></span>
+            {% endif %}
+        
+        {% endfor %}
+        <span>({{movie["vote_average"]/2}})</span><span> {{movie["vote_count"]}}</span>
+        <hr>
+        <p>{{ movie["overview"]|length > 50 ? movie["overview"]|slice(0, 150) ~ '...' : movie["overview"]}}</p> 
+    </div>
+    </div> 
+    {% endfor %}
+</div>
+</div>

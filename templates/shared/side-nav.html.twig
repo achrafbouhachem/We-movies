@@ -1,0 +1,6 @@
+<div class="sidenav">
+{% for genre in genres %}
+    <div class="genre-checkbox" id="checkBar"><input class="checkbox" value={{genre.id}} type="checkbox"> <label>{{genre['name']}}</label></div>
+{% endfor %}
+ 
+</div>

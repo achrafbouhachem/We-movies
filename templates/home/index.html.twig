@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Movies
+{% endblock %}
+
+{% block body %}
+	<style></style>
+
+	{% include "shared/side-nav.html.twig"  with { 'genres':genres} %}
+
+    {% include "shared/header.html.twig"  %}
+
+	<div id="card-container">
+		{% include "home/movies.html.twig" with {'movies': movies,'movieKey': movieKey} %}
+	</div>
+
+
+	<div
+		id="myModal" class="modal">
+		<!-- Modal content -->
+		<div class="modal-content">
+		</div>
+	</div>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+<div class="modal-content">
+    <div class="card" style="width:100%">
+    <img src={{movie["poster_path"]}} alt="Avatar" style="height:300px;width:100%">
+    <div class="container">
+        <h4><b>{{movie["title"]}}</b></h4> 
+        {% for i in 1..5 %}
+            {% if movie["vote_average"]/2 > i %}
+                <span class="fa fa-star" style="color:orange"></span>
+            {% else %}
+            <span class="fa fa-star" ></span>
+            {% endif %}
+        
+        {% endfor %}
+        <span>({{movie["vote_average"]/2}})</span><span> {{movie["vote_count"]}}</span>
+        <hr>
+        <p>{{ movie["overview"]}}</p> 
+        <br><br><br><br>
+
+
+
+    </div>
+    </div> 
+</div>
