@@ -96,18 +96,6 @@
 
 
 
-
-
-  #myInput {
-    box-sizing: border-box;
-   
-    background-position: 14px 12px;
-    background-repeat: no-repeat;
-    font-size: 16px;
-    padding: 14px 20px 12px 45px;
-    border: none;
-    border-bottom: 1px solid #ddd;
-  }
   
 
   .dropdown-content {
@@ -143,27 +131,6 @@
     border: 1px solid #888;
     width: 30%;
   }
-  
-  /* The Close Button */
-  .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-
-
-
-
-
 
 
   .dropbtn {
@@ -175,9 +142,7 @@
     cursor: pointer;
   }
   
-  .dropbtn:hover, .dropbtn:focus {
-    background-color: #3e8e41;
-  }
+
   
   #myInput {
     box-sizing: border-box;

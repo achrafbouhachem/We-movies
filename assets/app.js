@@ -22,9 +22,13 @@ $(document).ready(function () {
     }
 
   });
+
   $input.focusout(function (e) {
-    $("#auto-complete").hide();
+    setTimeout(function (){
+        $("#auto-complete").hide();
+    },1000)
   });
+
 });
 //************************************************** */
 
@@ -78,9 +82,9 @@ $(document).on("click", '.card', function (e) {
 $(document).on("click",'.movie-item', function (e) {
   console.log("search item click");
   $.get("http://127.0.0.1:8000/ajax/movies/details/" + e.target.id, function (data) {
-    console.log("test click item")
-    // $('.modal-content').replaceWith(data);
-    // modal.style.display = "block";
+    console.log(data)
+     $('.modal-content').replaceWith(data);
+     modal.style.display = "block";
   });
 
 });
